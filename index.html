@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="site.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <ul class="tab-heading">
+            <li onclick="view('row')">
+                Soru
+            <div class="tab-content" id="row">
+                <div id="icerik" class="contents">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, ex? Nulla recusandae enim ratione maiores expedita in modi quos facere ipsa? Officia autem repudiandae laudantium, totam sunt optio odio enim.</div>
+            </div>
+            </li>
+            <li onclick="view('row1')">
+                Soru2
+            <div class="tab-content" id="row1">
+                <div id="icerik1" class="contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dicta vero expedita amet ipsum accusantium culpa, impedit doloribus! Quam earum ea aliquid at dolores odio laboriosam impedit sunt nulla soluta.</div>
+            </div>
+            </li>
+            <li onclick="view('row2')">
+                Soru3
+            <div class="tab-content" id="row2" onclick="view('row2')">
+                <div id="icerik2" class="contents">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure amet magni dignissimos deleniti error architecto voluptas nihil esse ab fuga. Blanditiis perferendis dolorum eaque, fugit modi recusandae eligendi dicta aut.</div>
+            </div>
+            </li>
+            <li onclick="view('row3')">
+                Soru4
+            <div class="tab-content" id="row3" onclick="view('row3')">
+                <div id="icerik3" class="contents">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quos excepturi qui sapiente voluptatem? Inventore architecto voluptatum modi dolore eius. Sit voluptatum quidem odit iusto incidunt eaque non dignissimos iure!</div>
+            </div>
+            </li>
+            <li onclick="view('row4')">
+                Soru5
+            <div class="tab-content" id="row4" onclick="view('row4')">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus quidem repellat sapiente numquam molestiae dolorem minima impedit, a quo possimus ipsum vitae et, laboriosam voluptate illum voluptas, voluptatibus saepe.
+            </div>
+            </li>
+    </div>
+    <script>
+        function hide(){
+            var arr=document.getElementsByClassName("tab-content") 
+            for(var i=0;i<arr.length;i++){
+                arr[i].style.display="none";
+            }
+        }
+        function view(id){
+            hide();
+            let content = document.getElementById(id);
+            content.style.display = "block";
+            content.click(hide)
+           
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
